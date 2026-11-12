@@ -1,0 +1,12 @@
+﻿root = true
+
+[*]
+insert_final_newline = true
+end_of_line = crlf
+
+[*.cs]
+dotnet_diagnostic.SA1600.severity = none
+dotnet_diagnostic.SA1601.severity = none
+dotnet_diagnostic.SA1602.severity = none
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.CA1515.severity = none

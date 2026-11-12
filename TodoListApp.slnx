@@ -1,0 +1,10 @@
+﻿<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="stylecop.json" />
+  </Folder>
+  <Project Path="TodoListApp.WebApi/TodoListApp.WebApi.csproj" />
+  <Project Path="TodoListApp.WebApp/TodoListApp.WebApp.csproj" />
+</Solution>
+
