@@ -1,6 +1,21 @@
-﻿namespace TodoListApp.WebApi.Data
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TodoListApp.WebApi.Entities;
+
+namespace TodoListApp.WebApi.Data.Configurations;
+
+public class TodoListShareConfiguration : IEntityTypeConfiguration<TodoListShare>
 {
-    public class TodoListShareConfiguration
+    public void Configure(EntityTypeBuilder<TodoListShare> builder)
     {
+        ArgumentNullException.ThrowIfNull(builder);
+
+        builder.HasKey(s => new { s.TodoListId, s.UserId });
+        builder.Property(s => s.UserId).IsRequired().HasMaxLength(450);
+
+        builder.HasData(
+            new TodoListShare { TodoListId = 1, UserId = "user-2" },
+            new TodoListShare { TodoListId = 1, UserId = "user-3" },
+            new TodoListShare { TodoListId = 3, UserId = "user-1" });
     }
 }
