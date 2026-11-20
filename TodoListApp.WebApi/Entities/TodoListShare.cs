@@ -7,4 +7,6 @@ public class TodoListShare
     public TodoList TodoList { get; set; } = null!;
 
     public string UserId { get; set; } = string.Empty;
+
+    public TodoListRole Role { get; set; }
 }
